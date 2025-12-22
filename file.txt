@@ -1,4 +1,4 @@
-hello wolrd
+hello world
 
 to de config git use command
 rm ~/.gitconfig
@@ -10,5 +10,5 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/Prince-k6/first-repo.git
+git remote add origin https://github.com/Prince-k6/repoName.git
 git push -u origin main
