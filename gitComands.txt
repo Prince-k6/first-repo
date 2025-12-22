@@ -1,0 +1,72 @@
+
+------------------------BASIC SETUP-------------------------------------
+git config --global user.name "Your Name"
+git config --global user.email "you@email.com"
+git config --list
+rm ~/.gitconfig                   #removes all global configurations
+
+-----------------------CREATE INITIALISE REPO---------------------------
+git init                          # Initialize new git repo
+git clone <repo-url>              # Clone an existing repo
+
+-----------------------TYPICAL DAILY WORKFLOW---------------------------
+git pull 
+git add .                         # Adds all changed files to staging area
+git commit -m "Your message"
+git push
+
+-----------------------CHECK STATUS & HISTORY---------------------------
+git status                        # Check file status
+git log                           # Full commit history
+git log --oneline                 # Short history
+git diff                          # View unstaged changes
+
+-----------------------STAGING & COMMITING------------------------------
+git add file.txt                  # Stage specific file
+git add .                         # Stage all changes
+git commit -m "message"           # Commit staged files
+git commit -am "message"          # Add + commit tracked files
+
+-----------------------BRANCHING-----------------------------------------
+git branch                        # List branches
+git branch newBranch              # Create branch
+git checkout branchName           # Switch branch
+git checkout -b newBranch         # Create + switch
+git branch -d branchName          # Delete branch
+
+-----------------------MERGING--------------------------------------------
+git merge branch-name             # Merge into current branch
+
+-----------------------REMOTE REPOSITORIES--------------------------------
+git remote -v                     # Shows the remote repositories (URLs) linked to your local repo
+git remote add origin <repo-url>  # Connects your local repository to a remote repo
+git push origin main              # Pushes your local 'main' branch commits to the remote repo
+git pull origin main              # Fetches changes from the remote 'main' branch and merges them into your local 'main' branch
+
+-----------------------UNDO & FIX MISTAKES--------------------------------
+git restore file.txt              # Discard changes
+git restore --staged file.txt     # Unstage file
+git reset --soft HEAD~1           # Undo commit (keep changes)
+git reset --hard HEAD~1           # Undo commit (delete changes)
+
+-----------------------STASH( SAVE WORK TEMPORARILY)----------------------
+git stash                         # Temporarily saves your uncommitted changes and cleans the working directory
+git stash list                    # Shows all stashed changes with stash IDs
+git stash apply                   # Restores the most recent stash
+git stash drop                    # Deletes the most recent stash permanently
+
+-----------------------TAGS-----------------------------------------------
+git tag v1.0                      # Commonly used to mark releases or versions
+git tag                           # Lists all tags in the repository
+git push origin v1.0              # Pushes the tag v1.0 to the remote repository, Tags are NOT pushed automatically with commits
+
+-----------------------USEFUL SHORTCUTS-----------------------------------
+git log --graph --oneline --all   # Shows commit history in a compact, visual tree format
+git clean -fd                     # Remove untracked files
+git show <commit-id>              # Displays details of a specific commit
+
+
+
+
+
+
